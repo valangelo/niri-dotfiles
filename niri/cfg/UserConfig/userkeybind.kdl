@@ -1,0 +1,45 @@
+binds {
+
+    //Custom Keybind
+    //Mod+Y                               repeat=false { toggle-overview; }
+    Mod+KP_Subtract                     { set-column-width "-10%"; }
+    Mod+KP_Add                          { set-column-width "+10%"; }
+    Mod+Shift+KP_Subtract               { set-window-height "-10%"; }
+    Mod+Shift+KP_Add                    { set-window-height "+10%"; }
+
+
+    // ─── Audio Sink Control ───
+
+    // Previous sink
+    Alt+F5 allow-when-locked=true repeat=false  {
+        spawn "~/.config/niri/cfg/UserConfig/audio-sink.sh" "prev";
+        }
+
+    // Mute
+    Alt+F6 allow-when-locked=true repeat=false{
+        spawn "~/.config/niri/cfg/UserConfig/audio-sink.sh" "mute";
+        }
+
+    // Next sink
+    Alt+F7 allow-when-locked=true repeat=false{
+    spawn "~/.config/niri/cfg/UserConfig/audio-sink.sh" "next"  
+    }
+
+    // Select sink (menu)
+    Alt+F8 allow-when-locked=true repeat=false{
+        spawn "~/.config/niri/cfg/UserConfig/audio-sink.sh" "select";
+    }
+
+
+    // ─── Volume Control (Selected Sink) ───
+
+    // Volume up
+    Mod+equal allow-when-locked=true {
+        spawn "bash" "-c" "~/.config/niri/cfg/UserConfig/audio-sink.sh +5%"
+    }
+
+    // Volume down
+    Mod+minus allow-when-locked=true {
+        spawn "bash" "-c" "~/.config/niri/cfg/UserConfig/audio-sink.sh -5%";
+    }
+}
