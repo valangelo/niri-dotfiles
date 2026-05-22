@@ -2,3 +2,4 @@
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
 
     spawn-sh-at-startup "qs -c noctalia-shell"
+    spawn-at-startup "sh" "-c" "niri msg --json event-stream | while read -r line; do echo \"$line\" | grep -q 'OutputsChanged' && /mnt/Important/Projects/Scripts/auto-switch-screen; done"

@@ -1,5 +1,5 @@
     prefer-no-csd
-    screenshot-path null
+    screenshot-path "/home/aangelo/Pictures/Screenshots/"
 
     environment {
         ELECTRON_OZONE_PLATFORM_HINT "auto"
@@ -11,8 +11,8 @@
     }
 
     cursor {
-        xcursor-theme "capitaine-cursors"
-        xcursor-size 24
+        xcursor-theme "Buuf"
+        xcursor-size 32
     }
 
     debug {

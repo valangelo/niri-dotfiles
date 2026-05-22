@@ -3,7 +3,12 @@
 // You will have to remove "/-" and edit it before it takes effect.
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
 
-/- output "DP-1" {
-    mode "1920x1080@60.000" // Set resolution and refresh rate
-    scale 1 // No scaling (use 2 for HiDPI)
+output "DP-2" {
+    focus-at-startup
+    variable-refresh-rate on-demand=true
+    position x=500 y=0
+}
+
+output "HDMI-A-1" {
+    transform "270"
 }

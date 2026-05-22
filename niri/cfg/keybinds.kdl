@@ -15,8 +15,8 @@ binds {
     Mod+ALT+L                           hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
     Mod+Shift+Q                         hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 
-    // Please choose your own file manager.
-    Mod+E                               hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
+    // ─── File Manager ───
+    Mod+E                               hotkey-overlay-title="File Manager: Thunar" { spawn "thunar"; }
 
     // ─── Media Controls ───
     XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
@@ -126,14 +126,12 @@ binds {
     CTRL+Shift+3                        { screenshot-window; }
 
     // ─── Emergency Escape Key ───
-    // Use this when a fullscreen app blocks your keybinds.
-    // It disables any active keyboard shortcut inhibitor, restoring control.
+
     Mod+ESCAPE                          allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     // ─── Exit / Power ───
     CTRL+ALT+Delete                     { quit; } // Also quits Niri
     Mod+Shift+P                         { power-off-monitors; } // Turn off screens (useful for OLED or privacy)
     Mod+O                               repeat=false { toggle-overview; }
-    Mod+A                               repeat=false { toggle-overview; }
-}
 
+}
